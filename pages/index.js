@@ -16,8 +16,12 @@ const Home = ({ data }) => {
 
   const handleReset = () => {
     setSearchText("");
-    setSelectedStatus("");
+    setSelectedStatus(null);
   };
+
+
+
+  //***********************FILTERS**********************
 
   const filters = {
     searchText: searchText,
@@ -60,6 +64,9 @@ const Home = ({ data }) => {
       : [];
     setFilteredData(out);
   }, [searchText, selectedStatus]);
+  //********************FILTERS
+
+
 
 
   return (
